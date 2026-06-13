@@ -18,3 +18,14 @@ const reverseString = (inputString: string): string => {
     return reverseString;
 }
 
+// solutions 3:
+type StringOrNumber = string | number;
+const checkType = (inputValue: StringOrNumber): StringOrNumber => {
+    if (typeof inputValue === "string") {
+        return "String";
+    } else {
+        return "Number";
+    }
+}
+
+
