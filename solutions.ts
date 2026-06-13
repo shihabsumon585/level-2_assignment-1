@@ -9,3 +9,12 @@ const filterEvenNumbers = (inputArray: ArrayOfNumber): ArrayOfNumber => {
     return evenNumbers;
 }
 
+// solutions 2:
+const reverseString = (inputString: string): string => {
+    let reverseString = "";
+    for (let index = (inputString.length - 1); index >= 0; index--) {
+        reverseString = reverseString + inputString[index];
+    }
+    return reverseString;
+}
+
