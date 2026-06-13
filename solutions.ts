@@ -28,4 +28,12 @@ const checkType = (inputValue: StringOrNumber): StringOrNumber => {
     }
 }
 
-
+// solutions 4:
+type User = {
+    id: number;
+    name: string;
+    address: string;
+}
+const getProperty = <T>(inputObject: T, key: string | number) => {
+    return inputObject[key];
+}
