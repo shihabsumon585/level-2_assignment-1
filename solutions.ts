@@ -29,11 +29,19 @@ const checkType = (inputValue: StringOrNumber): StringOrNumber => {
 }
 
 // solutions 4:
-type User = {
-    id: number;
-    name: string;
-    address: string;
+const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
+    return obj[key];
+};
+
+
+
+// solutions 5:
+interface Book {
+    title: string;
+    author: string;
+    publishedYear: number;
 }
-const getProperty = <T>(inputObject: T, key: string | number) => {
-    return inputObject[key];
+const toggleReadStatus = (inputObject: Book) => {
+    const newObject = { ...inputObject, isRead: true };
+    return newObject;
 }
