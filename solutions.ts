@@ -34,7 +34,6 @@ const getProperty = <T, K extends keyof T>(obj: T, key: K): T[K] => {
 };
 
 
-
 // solutions 5:
 interface Book {
     title: string;
@@ -45,3 +44,36 @@ const toggleReadStatus = (inputObject: Book) => {
     const newObject = { ...inputObject, isRead: true };
     return newObject;
 }
+
+
+// solutions 6:
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+}
+class Student extends Person {
+    grade: string;
+
+    constructor(name: string, age: number, grade: string) {
+        super(name, age);
+        this.grade = grade;
+    }
+
+    getDetails() {
+        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+    }
+}
+
+// solutions 7:
+const getIntersection = (array1: number[], array2: number[]): number[] => {
+    const filteredArray = array1.filter(num => {
+        return array2.includes(num);
+    })
+    return filteredArray;
+}
+
