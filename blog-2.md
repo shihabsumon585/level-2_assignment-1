@@ -22,5 +22,5 @@ Conclusion:
 
 
 
-*** why is unknown the safer choice for handling unpredictable data? 
+*** why is unknown the safer choice for handling unpredictable data?
 *** Explain the concept of type narrowing.
